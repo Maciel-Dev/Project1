@@ -1,0 +1,9 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+    <h1>Results of Search</h1>
+
+    {% for entry in listStrings %}
+        <a href = "wiki/{{entry}}"><li>{{ entry }}</li></a>
+    {% endfor %}
+{% endblock %}

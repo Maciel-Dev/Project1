@@ -1,0 +1,9 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+        <label for="markDownTitle">Wiki Title</label>
+        <textarea id="markDownTitle" name="markDownTitle" cols="50" style="width: auto; height: 30px;position: relative; top: 7px;">{{title}}</textarea>
+        <textarea id="markDownBody" name="markDownBody" cols="50">{{text}}</textarea>
+          <br><br>
+          <input type="submit" value="Submit">
+{% endblock %}
