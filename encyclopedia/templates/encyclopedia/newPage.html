@@ -1,12 +1,15 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block body %}
+
+    <p style="color: red; ">{{ error }}</p>
     
     <form action="{% url 'newPage' %}" method="GET">
         {% csrf_token %}
-        <label for="w3review">Wiki Title</label>
-        <textarea id="markDownTitle" name="markDownTitle" cols="50" style="width: auto; height: 30px;position: relative; top: 7px;"></textarea>
-        <textarea id="markDownBody" name="markDownBody" cols="50">Type your text here</textarea>
+        <p>Wiki Title</p>
+        <textarea id="markDownTitle" name="markDownTitle" cols="50" style="width: auto; height: 30px;position: relative; top: -10px;"></textarea>
+        <p>Wiki Content</p>
+        <textarea id="markDownBody" name="markDownBody" cols="40" style="height: 250px;">Type your text here</textarea>
           <br><br>
           <input type="submit" value="Submit">
         </form>
